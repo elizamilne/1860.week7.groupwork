@@ -48,6 +48,6 @@
     Or(a=bandnotcandd, b=aandnotbandcandd, out=thirdor);
     Or(a= thirdor, b= or5, out=fifthor);
     Or(a=firstor, b=secondor, out=fourthor);
-    Or(a= fourthor, b=andthree, out=sixthor)
+    Or(a= fourthor, b=andthree, out=sixthor);
     Or(a=sixthor, b=fifthor, out=d);
 }
