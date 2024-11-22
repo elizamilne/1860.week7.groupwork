@@ -24,7 +24,7 @@ CHIP DecoderSegment201841421 {
  
  // not a and c and not d 
  And(a=nota, b=c, out=notaandc);
- And(a=notd, b=notaandc, c=notaandcandnotd);
+ And(a=notd, b=notaandc, out=notaandcandnotd);
 
  // b and not c and d 
  And(a=b, b=notc, out=bandnotc);
