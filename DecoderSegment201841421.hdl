@@ -28,7 +28,7 @@
     And(a=notd, b=notaandc, out=notaandcandnotd);
 
     And(a=A, b =notb, out=aandnotb);
-    And(a=notc,= anandnotb, out=or5);
+    And(a=notc,= aandnotb, out=or5);
 
     And(a=B, b=notc, out=bandnotc);
     And(a=bandnotc, b=D, out=bandnotcandd);
