@@ -7,41 +7,41 @@
 
     PARTS:
     
-    // NOT gates (complements)
+    
     Not(in=A, out=nota);
     Not(in=B, out=notb);
     Not(in=C, out=notc);
     Not(in=D, out=notd);
 
-    // AND gates for various combinations
     
-    // not C and not D, and A
+    
+    
     And(a=notc, b=notd, out=notcandnotd);
     And(a=A, b=notcandnotd, out=notcandnotdanda);
     
-    // not A and not B and not C and not D
+  
     And(a=nota, b=notb, out=notaandnotb);
     And(a=notc, b=notd, out=notcandnotd2);  // Combine NOT C and NOT D
     And(a=notaandnotb, b=notcandnotd2, out=notall);
 
-    // not A and not B and C
     And(a=nota, b=notb, out=notaandnotb2);
     And(a=C, b=notaandnotb2, out=notaandnotbandc);
     
-    // not A and C and not D
+
     And(a=nota, b=C, out=notaandc);
     And(a=notd, b=notaandc, out=notaandcandnotd);
 
-    // B and not C and D
+    
+
     And(a=B, b=notc, out=bandnotc);
     And(a=bandnotc, b=D, out=bandnotcandd);
 
-    // A and not B and C and D
+    
     And(a=A, b=notb, out=aandnotb);
     And(a=C, b=D, out=candd);
     And(a=aandnotb, b=candd, out=aandnotbandcandd);
 
-    // OR gates to combine all the intermediate results
+    
     Or(a=notcandnotdanda, b=notall, out=firstor);
     Or(a=notaandnotbandc, b=notaandcandnotd, out=secondor);
     Or(a=bandnotcandd, b=aandnotbandcandd, out=thirdor);
