@@ -27,8 +27,8 @@
     And(a=nota, b=C, out=notaandc);
     And(a=notd, b=notaandc, out=notaandcandnotd);
 
-    And(a=A, b =notb, out=aandnotb)
-    And(a=notC,= anandnotb, out=or5)
+    And(a=A, b =notb, out=aandnotb);
+    And(a=notC,= anandnotb, out=or5);
 
     And(a=B, b=notc, out=bandnotc);
     And(a=bandnotc, b=D, out=bandnotcandd);
@@ -42,7 +42,7 @@
     Or(a=notcandnotdanda, b=notall, out=firstor);
     Or(a=notaandnotbandc, b=notaandcandnotd, out=secondor);
     Or(a=bandnotcandd, b=aandnotbandcandd, out=thirdor);
-    Or(a= thirdor, b= or5, c=fifthor)
+    Or(a= thirdor, b= or5, c=fifthor);
     Or(a=firstor, b=secondor, out=fourthor);
     Or(a=fourthor, b=fifthor, out=d);
 }
