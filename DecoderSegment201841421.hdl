@@ -3,7 +3,7 @@
 
  CHIP DecoderSegment201841421 {
     IN A, B, C, D;
-    OUT segmentD;
+    OUT d;
 
     PARTS:
     
@@ -46,5 +46,5 @@
     Or(a=notaandnotbandc, b=notaandcandnotd, out=secondor);
     Or(a=bandnotcandd, b=aandnotbandcandd, out=thirdor);
     Or(a=firstor, b=secondor, out=fourthor);
-    Or(a=fourthor, b=thirdor, out=segmentD);
+    Or(a=fourthor, b=thirdor, out=d);
 }
