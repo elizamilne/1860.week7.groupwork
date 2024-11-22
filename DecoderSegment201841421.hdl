@@ -42,7 +42,7 @@
     Or(a=notcandnotdanda, b=notall, out=firstor);
     Or(a=notaandnotbandc, b=notaandcandnotd, out=secondor);
     Or(a=bandnotcandd, b=aandnotbandcandd, out=thirdor);
-    Or(a= thirdor, b= or5, c=fifthor);
+    Or(a= thirdor, b= or5, out=fifthor);
     Or(a=firstor, b=secondor, out=fourthor);
     Or(a=fourthor, b=fifthor, out=d);
 }
