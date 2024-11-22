@@ -34,9 +34,9 @@
     And(a=bandnotc, b=D, out=bandnotcandd);
 
     
-    And(a=A, b=notb, out=aandnotb);
+    And(a=A, b=notb, out=aandnotb2);
     And(a=C, b=D, out=candd);
-    And(a=aandnotb, b=candd, out=aandnotbandcandd);
+    And(a=aandnotb2, b=candd, out=aandnotbandcandd);
 
     
     Or(a=notcandnotdanda, b=notall, out=firstor);
