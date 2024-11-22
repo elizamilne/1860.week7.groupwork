@@ -21,7 +21,7 @@
     
   
     And(a=nota, b=notb, out=notaandnotb);
-    And(a=notc, b=notd, out=notcandnotd2);  // Combine NOT C and NOT D
+    And(a=notc, b=notd, out=notcandnotd2);  
     And(a=notaandnotb, b=notcandnotd2, out=notall);
 
     And(a=nota, b=notb, out=notaandnotb2);
