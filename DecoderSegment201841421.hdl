@@ -13,6 +13,10 @@
     Not(in=C, out=notc);
     Not(in=D, out=notd);
 
+    And(a=A, b=B, out=andone);
+    And(a=C, b=notd, out=andtwo);
+    And(a=andone, b=andtwo, out=andthree);
+
     And(a=notc, b=notd, out=notcandnotd);
     And(a=A, b=notcandnotd, out=notcandnotdanda);
     
@@ -44,5 +48,6 @@
     Or(a=bandnotcandd, b=aandnotbandcandd, out=thirdor);
     Or(a= thirdor, b= or5, out=fifthor);
     Or(a=firstor, b=secondor, out=fourthor);
-    Or(a=fourthor, b=fifthor, out=d);
+    Or(a= fourthor, b=andthree, out=sixthor)
+    Or(a=sixthor, b=fifthor, out=d);
 }
