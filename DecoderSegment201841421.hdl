@@ -1,0 +1,45 @@
+CHIP DecoderSegment201841421 {
+ IN A,B,C,D;
+ OUT segmentD;
+ PARTS:
+ 
+ // not complements
+ Not(in=A, out=nota);
+ Not(in=B, out=notb);
+ Not(in=C, out=notc);
+ Not(in=D, out=notd);
+ 
+ // not c and not d and a 
+ And(a=notc, b=notd,  out=notcandnotd);
+ And(a=a, b=notcandd, out=notcandnotdanda );
+
+ // not a and not b and not c and not 
+ And(a=nota, b=notb, out=notaandnotb);
+ And(a=notc, b=notc, out=notcandnotd2);
+ And(a=notaandnotb, b=notcandnotd2, out=notall);
+
+ // not a and not b and c 
+ And(a=nota, b=notb, c=notaandnotb2);
+ And(a=c, b=notaandnotb2, out=notaandnotbandc);
+ 
+ // not a and c and not d 
+ And(a=nota, b=c, out=notaandc);
+ And(a=notd b=notaandc, c=notaandcandnotd);
+
+ // b and not c and d 
+ And(a=b, b=notc, out=bandnotc);
+ And(a=bandnotc, b=d, out=bandnotcandd);
+
+ // a and not b and c and d 
+ And(a= a, b=notb, out= aandnotb);
+ And(a=c, b=d, out=candd);
+ And(a=aandnotb, b=candd, out=aandnotbandcandd);
+
+ //or all
+ Or(a=notcandnotdanda, b=notall, out=firstor);
+ Or(a=notaandnotbandc, b=notaandcandnotd, out=secondor);
+ Or(a=bandnotcandd, b=aandnotbandcandd, out=thirdor);
+ Or(a=firstor, b=secondor, out=fourthor);
+ Or(a=fourthor, b=thirdor, out=segmentD);
+
+ }
