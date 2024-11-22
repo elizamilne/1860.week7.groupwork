@@ -19,7 +19,7 @@ CHIP DecoderSegment201841421 {
  And(a=notaandnotb, b=notcandnotd2, out=notall);
 
  // not a and not b and c 
- And(a=nota, b=notb, c=notaandnotb2);
+ And(a=nota, b=notb, out=notaandnotb2);
  And(a=c, b=notaandnotb2, out=notaandnotbandc);
  
  // not a and c and not d 
